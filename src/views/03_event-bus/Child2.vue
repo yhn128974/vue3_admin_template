@@ -12,8 +12,8 @@ import $bus from '../../bus';
 const handler = ()=>{
   $bus.emit('car',{car:"法拉利"});
 }
-</script>
-
+</script> 
+  
 <style scoped>
 .child2{
   width: 300px;

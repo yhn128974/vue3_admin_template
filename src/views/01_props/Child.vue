@@ -16,7 +16,7 @@
 let props = defineProps(['info','money']); //数组|对象写法都可以
 //按钮点击的回调
 const updateProps = ()=>{
-  // props.money+=10;  props:只读的
+  // props.money+=10;  //props:只读的
   console.log(props.info)
 }
 </script>
