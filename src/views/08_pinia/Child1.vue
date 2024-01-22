@@ -1,29 +1,23 @@
 <template>
-  <div class="child1">
-    {{ infoStore.count }}
-    <p @click="updateTodo">{{ todoStore.arr }}{{todoStore.total}}</p>
+  <div class="container">
+    <h2>
+      this is child1 and infoCount is: {{ infoStore.count }} from infoStore
+    </h2>
   </div>
 </template>
 
 <script setup lang="ts">
-import useInfoStore from "../../store/modules/info";
-//获取小仓库对象
-let infoStore = useInfoStore();
+import UseInfoStore from "../../store/modules/info";
+// 执行UseInfoStore函数
+let infoStore = UseInfoStore();
 
-//引入组合式API函数仓库
-import useTodoStore from "../../store/modules/todo";
-let todoStore = useTodoStore();
-
-//点击p段落去修改仓库的数据
-const updateTodo = () => {
-  todoStore.updateTodo();
-};
+// console.log(infoStore);
 </script>
 
 <style scoped>
-.child1 {
+.container {
   width: 200px;
   height: 200px;
-  background: hotpink;
+  background: rgb(236, 214, 73);
 }
 </style>

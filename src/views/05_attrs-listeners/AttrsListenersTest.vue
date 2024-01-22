@@ -1,9 +1,9 @@
 <template>
   <div>
     <h1>useAttrs</h1>
-    <el-button type="primary" size="small" :icon="Edit"></el-button>
+    <el-button type="primary" size="small" :icon="Edit" circle></el-button>
     <!-- 自定义组件 -->
-    <HintButton type="primary" size="small" :icon="Edit" title="编辑按钮" @click="handler" @xxx="handler"></HintButton>
+    <HintButton type="primary" size="small" :icon="Edit" title="编辑按钮" @click="handler" @xxx="handler" circle></HintButton>
   </div>
 </template>
 
@@ -16,9 +16,11 @@ import {
   Edit,
   Message,
   Search,
-  Star,
+  Star, 
 } from "@element-plus/icons-vue";
+
 import HintButton from "./HintButton.vue";
+
 //按钮点击的回调
 const handler = ()=>{
   alert(12306);

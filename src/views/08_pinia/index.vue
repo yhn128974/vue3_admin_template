@@ -1,10 +1,12 @@
 <template>
   <div class="box">
     <h1>pinia</h1>
+
     <div class="container">
       <Child></Child>
       <Child1></Child1>
     </div>
+    
   </div>
 </template>
 
@@ -25,7 +27,7 @@ import Child1 from "./Child1.vue";
   height: 400px;
   background: skyblue;
 }
-.container{
+.container {
   display: flex;
 }
 </style>

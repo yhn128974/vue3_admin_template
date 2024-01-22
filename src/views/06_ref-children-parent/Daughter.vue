@@ -1,25 +1,26 @@
 <template>
-  <div class="dau">
-     <h1>我是闺女曹杰{{money}}</h1>
-     <button @click="handler($parent)">点击我爸爸给我10000元</button>
+  <div class="container">
+    <h1>
+      I am cao jie the daughter of chao cao. my money number is {{ money }} now,
+    </h1>
+    <button @click="getmoney($parent)">give me money</button>
   </div>
 </template>
 
 <script setup lang="ts">
-import {ref} from 'vue';
-//闺女钱数
-let money = ref(999999);
-//闺女按钮点击回调
-const handler = ($parent)=>{
-   money.value+=10000;
-   $parent.money-=10000;
-}
+import { ref } from "vue";
+let money = ref(2000);
+
+const getmoney = ($parent) => {
+  money.value += 100;
+  $parent.money -= 100;
+};
 </script>
 
 <style scoped>
-.dau{
+.container {
   width: 300px;
   height: 300px;
-  background: hotpink;
+  background-color: hotpink;
 }
 </style>

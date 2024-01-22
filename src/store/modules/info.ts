@@ -1,30 +1,33 @@
-//定义info小仓库
+// 定义info仓库
+
 import { defineStore } from "pinia";
-//第一个仓库:小仓库名字  第二个参数:小仓库配置对象
-//defineStore方法执行会返回一个函数,函数作用就是让组件可以获取到仓库数据
-let useInfoStore = defineStore("info", {
-    //存储数据:state
-    state: () => {
-        return {
-            count: 99,
-            arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        }
+
+// 第一个参数为厂库名。第二个为配置对象
+// 该方法会返回一个函数，该函数的作用就是用于接收该厂库的数据
+let UseInfoStore = defineStore("info", {
+  // 函数式写法
+  state: () => {
+    return {
+      count: 99,
+      arr: [1, 2, 3, 4, 5, 6, 7, 7, 8],
+    };
+  },
+
+  actions: {
+    // actions 函数没有上下文对象
+    // 没有commit,mutation去修改数据
+    changeCount(num1: number, num2: number): void {
+      this.count = num1 + num2;
     },
-    actions: {
-        //注意:函数没有context上下文对象
-        //没有commit、没有mutations去修改数据
-        updateNum(a: number, b: number) {
-            this.count += a;
-        }
+  },
+  getters: {
+    total(): number {
+      return this.arr.reduce((prev: number, next: number) => {
+        return prev + next;
+      }, 0);
     },
-    getters: {
-        total() {
-            let result:any = this.arr.reduce((prev: number, next: number) => {
-                return prev + next;
-            }, 0);
-            return result;
-        }
-    }
+  },
 });
-//对外暴露方法
-export default useInfoStore;
+
+// 对外暴露该方法
+export default UseInfoStore;

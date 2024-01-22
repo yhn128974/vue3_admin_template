@@ -18,7 +18,7 @@
       <router-link to="/slot_pre">slot</router-link>&nbsp;&nbsp;
     </div>
     <br>
-    <router-view></router-view>
+    <router-view class="container"></router-view>
   </div>
 </template>
 
@@ -32,6 +32,9 @@
 </script>
 <style lang="less" scoped>
   .com {
+    .container{
+      border: 1px black solid;
+    }
     margin: 10px;
     a {
       font-size: 16px;
@@ -40,12 +43,5 @@
         color: red;
       }
     }
-  }
-</style>
-<style>
-  .box {
-    border: solid 1px #aaa;
-    margin: 5px;
-    padding: 5px;
   }
 </style>
