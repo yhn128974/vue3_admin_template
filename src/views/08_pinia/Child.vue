@@ -34,7 +34,7 @@ const handle_change_count = () => {
 <style scoped>
 .container {
   width: 200px;
-  height: 200px; 
+  height: 200px;
   background: yellowgreen;
   flex-direction: column;
 }

@@ -1,23 +1,32 @@
 <template>
   <div class="container">
-    <h2>
-      this is child1 and infoCount is: {{ infoStore.count }} from infoStore
-    </h2>
+    <div v-for="(item, index) in doStore.todos" :key="item.id">
+      <hr />
+      <div>the action is {{ item.title }}</div>
+    </div>
+    <hr />
+    <el-button @click="updateTodo">click this to update todos</el-button>
+    <hr />
+    <div>{{ doStore.total }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
-import UseInfoStore from "../../store/modules/info";
+import useTodoStore from "../../store/modules/todo";
 // 执行UseInfoStore函数
-let infoStore = UseInfoStore();
+let doStore = useTodoStore();
 
-// console.log(infoStore);
+// console.log(doStore);
+
+const updateTodo = () => {
+  doStore.updateTodo();
+};
 </script>
 
 <style scoped>
 .container {
-  width: 200px;
   height: 200px;
   background: rgb(236, 214, 73);
+  flex-direction: column;
 }
 </style>
