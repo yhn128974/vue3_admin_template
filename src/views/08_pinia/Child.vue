@@ -22,7 +22,7 @@ let infoStore = UseInfoStore();
 // console.log(infoStore);
 const handle_change_count = () => {
   // 修改数据的方法
-  // infoStore.count++;
+  // infoStore.count++; 
 
   // infoStore.$patch({
   //   count: 250,

@@ -1,25 +1,21 @@
 <template>
-  <div class="box">
-    <h1>我是子组件默认插槽</h1>
-    <!-- 默认插槽 -->
+  <div class="container">
+    <hr />
     <slot></slot>
-    <h1>我是子组件默认插槽</h1>
-    <h1>具名插槽填充数据</h1>
-    <slot name="a"></slot>
-    <h1>具名插槽填充数据</h1>
-    <h1>具名插槽填充数据</h1>
-    <slot name="b"></slot>
-    <h1>具名插槽填充数据</h1>
+    <hr />
+    <slot name="demo1"></slot>
+    <hr />
+    <slot name="demo2"></slot>
+    <hr />
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
-.box {
-  width: 100vw;
-  height: 500px;
-  background: skyblue;
+.container {
+  width: 100%;
+  height: 400px;
+  background-color: orange;
 }
 </style>

@@ -18,7 +18,7 @@ let doStore = useTodoStore();
 
 // console.log(doStore);
 
-const updateTodo = () => {
+const updateTodo = () => { 
   doStore.updateTodo();
 };
 </script>
